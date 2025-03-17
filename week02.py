@@ -2,6 +2,8 @@
 
 n = int(input("정수 입력 :"))
 result = 0
-for i in range(1, n+1): #On이고 시간복잡도검색해서 이미지에 있음
-    result = result + i
+#for i in range(1, n+1): #On이고 시간복잡도검색해서 이미지에 있음
+#    result = result + i
+result = n * (n + 1) // 2 # O(1)이다 상수시간?
 print(result)
+
