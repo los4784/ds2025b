@@ -20,8 +20,7 @@ class LinkedList:
     def __str__(self):  #
         node = self.head
         while node is not None:
-            out_texts = out_texts + str(node.data) + " -> "
-            # print(node.data)
+            out_texts = out_texts + f"{node.data} +  -> "
             node = node.link
         return out_texts  + "end"
 
