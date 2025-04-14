@@ -25,9 +25,11 @@ class Queue:
             raise IndexError("Queue is empty")
         self.size = self.size -1
         temp = self.front
+        # temp.link = None 를 쓰면 밑에 있는 font는 큐의 연결이 끊어져서 문제가 발생함
         self.front = self.front.link
         if self.front is None:
             self.rear = None
+        temp.link = None
         return  temp.data
 
 
@@ -37,4 +39,4 @@ q.enqueue("Data structure")
 print(q.size, q.front.data, q.rear.data)
 q.dequeue()
 q.dequeue()
-print(q.size, q.front, q.rear) #None이면 큐가 비었거나, 해당 위치에 노드가 없어서 .link로 연결된 다음 노드가 없다
+print(q.size, q.front, q.rear) # None이면 큐가 비었거나, 해당 위치에 노드가 없어서 .link로 연결된 다음 노드가 없다
